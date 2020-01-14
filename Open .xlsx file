@@ -6,6 +6,22 @@ import pandas as pd                                           # Importing Pandas
 content = pd.read_excel(r"/Users/lucia/Desktop/Teste.xlsx")   # Opening the file
 print(content.head())                                         # Print the head part of the file 
 
+import pandas as pd
+
+df = pd.read_excel("C:/Users/lucia/Desktop/filename.xlsx", sheet_name=1)
+
+arquivo_excel = pd.ExcelFile("filename.xlsx")
+'''
+print(arquivo_excel.sheet_names)
+'''
+aba1 = arquivo_excel.parse("Biaatch")
+print(aba1)
+'''
+print(df.head())
+'''
+
+df["NewPart"] = df["Hello Excel"]
+print(df.head())
 
 # *********************************************************************************************** XLRD
 # Open excel file using xlrd library
