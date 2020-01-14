@@ -29,3 +29,12 @@ for i in range(sheet.nrows) :
 
 # Printing a particular row 
 print(sheet.row_values(number_line))      
+
+# Creating and editing a .xlsx file
+import xlsxwriter
+
+work_book = xlsxwriter.Workbook("t3.xlsx")
+work_sheet = work_book.add_worksheet()
+
+work_sheet.write(0, 1, "0 1")
+work_book.close()
